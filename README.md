@@ -5,7 +5,7 @@ This is a very simple example of a DIDComm aware MQTT client.
 
 Typically, IoT devices are incapable of participating in DIDComm due to lacking
 the necessary crypto primitives on many devices (the ESP8266 family is a widely
-used example of a WiFi/Bluetooth capable but ECC incapable devices). A bridge
+used example of WiFi/Bluetooth capable but ECC incapable devices). A bridge
 such as this one can be used to fill this gap.
 
 The bridge retrieves the key and endpoint of the intended DIDComm recipient
@@ -30,7 +30,7 @@ $ pip install -r requirements.txt
 
 Start the example receiver:
 ```sh
-python receiver.py
+$ python receiver.py
 ```
 
 And note the printed `verkey`.
