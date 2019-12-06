@@ -59,7 +59,8 @@ async def main(broker_host, their_vk, endpoint):
     client = DIDCommTeeMQTTClient(their_vk, endpoint)
     await client.mqtt_connect(broker_host)
     await client.did_conn.send_async({
-        '@type': 'https://didcomm.dbluhm.com/mqtt/0.1/connected'
+        '@type': 'https://didcomm.dbluhm.com/mqtt/0.1/connected',
+        'broker': broker_host
     })
     client.subscribe('#', qos=0)
     await client.did_conn.send_async({
